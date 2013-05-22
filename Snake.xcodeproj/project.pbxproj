@@ -16,6 +16,12 @@
 		0675D32317212E57009AC7AB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0675D32217212E57009AC7AB /* Default.png */; };
 		0675D32517212E57009AC7AB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0675D32417212E57009AC7AB /* Default@2x.png */; };
 		0675D32717212E57009AC7AB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0675D32617212E57009AC7AB /* Default-568h@2x.png */; };
+		0675D33017212E89009AC7AB /* MSSnakeElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0675D32F17212E89009AC7AB /* MSSnakeElement.m */; };
+		0675D33A172133D3009AC7AB /* MSPlayingFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0675D339172133D3009AC7AB /* MSPlayingFieldView.m */; };
+		0675D34417213913009AC7AB /* MSSnakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0675D34317213913009AC7AB /* MSSnakeViewController.m */; };
+		06CB7E53172140B40022CAF9 /* MSSnakeFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB7E52172140B40022CAF9 /* MSSnakeFeed.m */; };
+		06CB7E5617214E5F0022CAF9 /* GameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 06CB7E5417214E5F0022CAF9 /* GameOver.png */; };
+		06CB7E5717214E5F0022CAF9 /* GameOver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06CB7E5517214E5F0022CAF9 /* GameOver@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,16 @@
 		0675D32217212E57009AC7AB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0675D32417212E57009AC7AB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0675D32617212E57009AC7AB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0675D32E17212E89009AC7AB /* MSSnakeElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSnakeElement.h; sourceTree = "<group>"; };
+		0675D32F17212E89009AC7AB /* MSSnakeElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSnakeElement.m; sourceTree = "<group>"; };
+		0675D338172133D3009AC7AB /* MSPlayingFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPlayingFieldView.h; sourceTree = "<group>"; };
+		0675D339172133D3009AC7AB /* MSPlayingFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPlayingFieldView.m; sourceTree = "<group>"; };
+		0675D34217213913009AC7AB /* MSSnakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSnakeViewController.h; sourceTree = "<group>"; };
+		0675D34317213913009AC7AB /* MSSnakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSnakeViewController.m; sourceTree = "<group>"; };
+		06CB7E51172140B40022CAF9 /* MSSnakeFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSnakeFeed.h; sourceTree = "<group>"; };
+		06CB7E52172140B40022CAF9 /* MSSnakeFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSnakeFeed.m; sourceTree = "<group>"; };
+		06CB7E5417214E5F0022CAF9 /* GameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameOver.png; sourceTree = "<group>"; };
+		06CB7E5517214E5F0022CAF9 /* GameOver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GameOver@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +94,9 @@
 		0675D31617212E57009AC7AB /* Snake */ = {
 			isa = PBXGroup;
 			children = (
+				0675D341172138FC009AC7AB /* ViewController */,
+				0675D33417213375009AC7AB /* Views */,
+				0675D32D17212E6E009AC7AB /* Model */,
 				0675D31F17212E57009AC7AB /* MSAppDelegate.h */,
 				0675D32017212E57009AC7AB /* MSAppDelegate.m */,
 				0675D31717212E57009AC7AB /* Supporting Files */,
@@ -88,6 +107,8 @@
 		0675D31717212E57009AC7AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				06CB7E5417214E5F0022CAF9 /* GameOver.png */,
+				06CB7E5517214E5F0022CAF9 /* GameOver@2x.png */,
 				0675D31817212E57009AC7AB /* Snake-Info.plist */,
 				0675D31917212E57009AC7AB /* InfoPlist.strings */,
 				0675D31C17212E57009AC7AB /* main.m */,
@@ -97,6 +118,35 @@
 				0675D32617212E57009AC7AB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0675D32D17212E6E009AC7AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0675D32E17212E89009AC7AB /* MSSnakeElement.h */,
+				0675D32F17212E89009AC7AB /* MSSnakeElement.m */,
+				06CB7E51172140B40022CAF9 /* MSSnakeFeed.h */,
+				06CB7E52172140B40022CAF9 /* MSSnakeFeed.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0675D33417213375009AC7AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0675D338172133D3009AC7AB /* MSPlayingFieldView.h */,
+				0675D339172133D3009AC7AB /* MSPlayingFieldView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0675D341172138FC009AC7AB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0675D34217213913009AC7AB /* MSSnakeViewController.h */,
+				0675D34317213913009AC7AB /* MSSnakeViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +205,8 @@
 				0675D32317212E57009AC7AB /* Default.png in Resources */,
 				0675D32517212E57009AC7AB /* Default@2x.png in Resources */,
 				0675D32717212E57009AC7AB /* Default-568h@2x.png in Resources */,
+				06CB7E5617214E5F0022CAF9 /* GameOver.png in Resources */,
+				06CB7E5717214E5F0022CAF9 /* GameOver@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +219,10 @@
 			files = (
 				0675D31D17212E57009AC7AB /* main.m in Sources */,
 				0675D32117212E57009AC7AB /* MSAppDelegate.m in Sources */,
+				0675D33017212E89009AC7AB /* MSSnakeElement.m in Sources */,
+				0675D33A172133D3009AC7AB /* MSPlayingFieldView.m in Sources */,
+				0675D34417213913009AC7AB /* MSSnakeViewController.m in Sources */,
+				06CB7E53172140B40022CAF9 /* MSSnakeFeed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +339,7 @@
 				0675D32C17212E57009AC7AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
