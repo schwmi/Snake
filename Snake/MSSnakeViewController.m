@@ -60,6 +60,9 @@
     swipeGestureUp.direction =  UISwipeGestureRecognizerDirectionUp;
     swipeGestureUp.numberOfTouchesRequired = 1;
     [self.playingField addGestureRecognizer:swipeGestureUp];
+    
+    [self setUpGame];
+    self.snakeTimer = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(moveSnake) userInfo:nil repeats:YES];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -139,14 +142,5 @@
     [self placeFeed];
 }
 
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-    // Do your thing after shaking device
-    if (self.playingField.alpha == 1.f) {
-        [self.gameOverImageView removeFromSuperview];
-        [self setUpGame];
-        self.snakeTimer = [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(moveSnake) userInfo:nil repeats:YES];
-        [[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:NO];
-    }
-}
 
 @end
